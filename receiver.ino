@@ -18,8 +18,8 @@ byte addresses[][6] = {"0"};
 
 
 
-void setup() {
-  
+void setup()
+{  
   radio.begin(); 
   radio.setChannel(115); 
   radio.setPALevel(RF24_PA_MAX);
