@@ -9,7 +9,7 @@ RF24 radio (7, 8);
 
 struct package
 {
-  int valbx = 90;             //thats will make the camera allways start in right position 90 degrees 
+  int valbx = 90;             //that will make the camera allways start in right position, 90 degrees 
   int valby = 90;
   
 }data;
