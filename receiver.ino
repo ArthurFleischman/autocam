@@ -16,7 +16,7 @@ struct package
 
 byte addresses[][6] = {"0"}; 
 
-
+int valx_before,valy_before;
 
 void setup()
 {  
@@ -38,8 +38,14 @@ void loop()
     while(radio.available())
     {
       radio.(&data,sizeof(data));
-      servox.write(data.valbx);
-      servoy.write(data.valby);
+      valx_before = data.valx;
+      valy_before = data.valy;
+      
+      if(data.valx != valx_before || data.valy != valy_before)
+      {
+        servox.write(data.valbx);
+        servoy.write(data.valby);
+      }
     }
   }
 }
