@@ -41,7 +41,7 @@ void loop()
       valx_before = data.valx;
       valy_before = data.valy;
       
-      if(data.valx != valx_before || data.valy != valy_before)
+      if((data.valx != valx_before) || (data.valy != valy_before))
       {
         servox.write(data.valbx);
         servoy.write(data.valby);
